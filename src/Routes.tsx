@@ -12,12 +12,14 @@ import { Destinos, DestinoForm , DestinoView} from './pages/Destinos';
 import  PrivateRoute from './components/PrivateRoute';
 
 import Login from  './pages/Login';
+import NewUser from  './pages/newuser';
 const Routes = ()=>{
   return (
     <Router>
       <Switch>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/newuser" element={<NewUser/>} />
         <Route path="/version" element={<Version />} />
         <Route path="/empresas" element={<PrivateRoute><Empresas/></PrivateRoute>} />
         <Route path="/destinos" element={<PrivateRoute><Destinos/></PrivateRoute>} />

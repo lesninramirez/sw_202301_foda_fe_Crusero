@@ -8,15 +8,25 @@ export const secApi = createApi({
       headers.set('apikey', VITE_APP_API_KEY||'');
     }
   }),
+  tagTypes: ["Users"],
   endpoints: (builder) => ({
+    createuser: builder.mutation({
+      query: (create:{email:string,password:string}) => ({
+        url: 'signin',
+        method: 'POST',
+        body: create
+      }),
+      invalidatesTags: ["Users"]
+    }),
     login: builder.mutation({
       query: (body) => ({
         url: 'signon',
         method: 'POST',
         body: body
-      })
+      }),
+      invalidatesTags: ["Users"]
     })
   })
 });
 
-export const {useLoginMutation} = secApi;
+export const {useCreateuserMutation,useLoginMutation} = secApi;
