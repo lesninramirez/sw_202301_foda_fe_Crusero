@@ -1,6 +1,7 @@
 .page {
-  background-color: #ddd;
-  color: #333;
+  background-image: url(../img/olas.gif);
+  background-size: cover;
+  color: black;
   min-height: 100vh;
 }
 .absoluteCenter {
@@ -14,11 +15,22 @@
   min-height: calc(100vh - 4.1rem);
 }
 .content {
-  background-color:#fff;
-  padding:1rem;
+  background: linear-gradient(#08546c, #022534);
   min-height: 100vh;
+  border-color: black;
+  
 }
 .withNavBar .content {
   margin-top:0.1rem;
   min-height: calc(100vh - 4.2rem);
+}
+
+.refresh{
+  color: black;
+  font-size: x-large;
+}
+
+.labelText{
+  font-size: xx-large;
+  color: whitesmoke;
 }
